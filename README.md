@@ -42,20 +42,13 @@ Click legend items to toggle categories
 
 Note holiday spikes (Carnival, Black Friday)
 
-🛠️ Technical Implementation
-Data Processing
-python
-# Calculate monthly sales by category
-monthly_sales = (orders.merge(items, on='order_id')
-                .groupby(['product_category', pd.Grouper(key='purchase_date', freq='M')])
-                .size()
-                .unstack(level=0))
 Dependencies
 text
 pandas>=1.3.0
 plotly>=5.0.0
 numpy>=1.21.0
 jupyter>=1.0.0  # For interactive analysis
+
 💡 Strategic Recommendations
 Stock prioritization: Focus on consistently top-performing categories
 
